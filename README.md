@@ -5,10 +5,10 @@ This project uses a data-driven and logic-based approach to predict insurance pr
 ---
 ## ## Features
 
-* [cite_start]**Decision Tree Model**: A decision tree is trained on a medical insurance dataset to find patterns that predict premium costs[cite: 18].
-* [cite_start]**Rule Extraction**: Logical IF-THEN rules are generated from the paths of the trained decision tree[cite: 19].
-* [cite_start]**Prolog Knowledge Base**: The extracted rules are encoded into a Prolog file, creating a logical knowledge base for predictions[cite: 19].
-* [cite_start]**Prediction**: The system takes an account holder's details as input and uses the knowledge base to predict whether their insurance premium will be "high" or "low"[cite: 19].
+* **Decision Tree Model**: A decision tree is trained on a medical insurance dataset to find patterns that predict premium costs.
+* **Rule Extraction**: Logical IF-THEN rules are generated from the paths of the trained decision tree.
+* **Prolog Knowledge Base**: The extracted rules are encoded into a Prolog file, creating a logical knowledge base for predictions.
+* **Prediction**: The system takes an account holder's details as input and uses the knowledge base to predict whether their insurance premium will be "high" or "low".
 
 ---
 ## ## Prerequisites
@@ -21,13 +21,18 @@ Before you begin, ensure you have the following software installed on your syste
 ---
 ## ## Setup and Installation
 
-1.  **Clone the Repository**
+1.  **Download the Dataset**
+    [cite_start]This project requires the medical insurance premium dataset. [cite: 20]
+    * [cite_start]Download the dataset from [Kaggle](https://www.kaggle.com/datasets/tejashvi14/medical-insurance-premium-prediction). [cite: 20]
+    * Place the CSV file in the root directory of this project and name it `insurance.csv`.
+
+2.  **Clone the Repository**
     ```bash
     git clone <your-repository-url>
     cd <your-repository-name>
     ```
 
-2.  **Create and Activate a Virtual Environment** (Recommended)
+3.  **Create and Activate a Virtual Environment** (Recommended)
     ```bash
     # Create the environment
     python -m venv venv
@@ -39,7 +44,7 @@ Before you begin, ensure you have the following software installed on your syste
     source venv/bin/activate
     ```
 
-3.  **Install Python Dependencies**
+4.  **Install Python Dependencies**
     Install all the required libraries using the `requirements.txt` file.
     ```bash
     pip install -r requirements.txt
@@ -75,7 +80,7 @@ Before you begin, ensure you have the following software installed on your syste
 .
 ├── train_model.py              # Python script to train the decision tree
 ├── insurance_rules.pl          # The Prolog knowledge base with facts and rules
-├── insurance.csv               # The dataset used for training
+├── Medicalpremium.csv               # The dataset used for training (must be downloaded)
 ├── requirements.txt            # Python dependencies for the project
 └── README.md                   # This file
 ```
